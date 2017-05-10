@@ -1,0 +1,29 @@
+#version 330 core
+layout(location = 0) in vec4 posicion; 
+in vec4 color;
+in vec2 coordenadaUV;
+
+uniform bool invertido;
+uniform bool conTextura;
+uniform sampler2D samplerImagen;
+
+uniform mat4 modelo;
+uniform mat4 vista;
+uniform mat4 proyeccion;
+
+out vec4 pColor;
+out vec2 pCoordenadaUV;
+
+void main() {
+
+	mat4 MVP = proyeccion * vista * modelo;
+	gl_Position = MVP * posicion;
+
+	pColor = color;
+	pCoordenadaUV = coordenadaUV;
+	
+
+}
+
+
+

@@ -1,0 +1,26 @@
+#version 330 core
+
+in vec4 pColor;
+in vec2 pCoordenadaUV;
+
+uniform bool invertido;
+uniform bool conTextura;
+uniform sampler2D samplerImagen;
+
+out vec4 salidaColor;
+
+void main() {
+
+	if (!conTextura) {
+		salidaColor = pColor;
+	} else {
+		salidaColor = texture(samplerImagen, pCoordenadaUV).rgba;
+	}
+	
+	if (invertido) {
+		salidaColor.x = 1 - salidaColor.x;
+		salidaColor.y = 1 - salidaColor.y;
+		salidaColor.z = 1 - salidaColor.z;
+	}
+	
+}

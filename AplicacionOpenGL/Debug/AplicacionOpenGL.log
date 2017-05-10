@@ -1,0 +1,5 @@
+﻿  Modelo.cpp
+  Dado.cpp
+c:\users\administrador\desktop\proyectoopengl-master\aplicacionopengl\dado.cpp(8): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+  AplicacionOpenGL.vcxproj -> C:\Users\Administrador\Desktop\ProyectoOpenGL-master\Debug\AplicacionOpenGL.exe
